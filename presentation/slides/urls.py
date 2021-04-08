@@ -7,5 +7,6 @@ router.register('presentations', views.PresentationView)
 router.register('slides', views.SlidesView)
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', views.IndexView.as_view()),
+    path('api/', include(router.urls))
 ]
