@@ -1,13 +1,12 @@
 # Slides api for react app
-___
 
 ## Used
 - Django
 - Django-Restframework
-
+- Materialize (css)
 ## Endpoints
-- /presentations
-- /slides
+- api/presentations
+- api/slides
 
 ## Model
 - Presentations
