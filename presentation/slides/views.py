@@ -1,13 +1,23 @@
 from django.shortcuts import render
 from django.views import View
+from django.contrib import messages
 from rest_framework import viewsets
 from .models import Presentations, Slides
 from .serializers import PresentationSerializer, SlidesSerializer
+from .forms import UserRegisterForm, AuthenticationForm
+
 
 class IndexView(View):
+    context = {}
+    user_reg_form = UserRegisterForm()
+    context['user_reg_form'] = user_reg_form
+
+    user_login_form = AuthenticationForm()
+    context['user_login_form'] = user_login_form
 
     def get(self, request):
-        return render(request, 'slides/index.html')
+        return render(request, 'slides/index.html', context=self.context)
+
 
 # API views ----------------------------------
 

@@ -7,4 +7,11 @@
       draggable: true // Choose whether you can drag to open on touch screens
     }
     var instances = M.Sidenav.init(elems, options);
+
+    var tab_elems = document.querySelectorAll('.tabs');
+    var tab_options = {
+        duration: 300,
+        swipeable: false,
+    }
+    var tab_instances = M.Tabs.init(tab_elems, tab_options);
   });
